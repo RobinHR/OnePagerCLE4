@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: VT323, sans-serif;
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/033/006/633/large/new-zarawut-my-town-4.jpg?1608124684");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    color:black;
+    text-decoration:none;
+}
+
+
+a:hover {
+    color:red;
+    font-weight:bold;
+}
+
+
+h1, h2, h3 {
+    margin-top: 4px;
+    font-weight:normal;
+    text-align: center;
+}
+
+
+nav {
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    justify-content: space-evenly;
+    border-radius: 5vh;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+nav div {
+    padding:8px;
+    justify-content: space-evenly;
+}
+
+
+.imagegallery {
+    margin:0;
+    padding:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    flex-direction: column;
+}
+
+
+.imagegallery img {
+    width:80%;
+    /*height: 20vh;*/
+    object-fit:cover;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    padding-top:10vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:white;
+    text-align:center;
+    height:30vh;
+    background-image:url(http://2.bp.blogspot.com/-iF6l6sgb-fw/Wb_03Hj8arI/AAAAAAAAKtU/SGDL5lmaensUrU2jRelFsTOWvWGnsP4fACK4BGAYYCw/s1600/BRANDAAN.jpg);
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+
+section {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 0 20% 30px 20%;
+    color: rgb(22, 22, 66);
+    font-size: 1.1em;
+    text-align: center;
+}
+
+
+footer {
+    background-color: rgb(255, 255, 255);
+    height:30vh;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    justify-content:center;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+
+    nav {
+        display: block;
+        padding: 10px;
+        position: static;
+    }
+
+    section {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    header {
+        background-size: 100%;
+    }
+
+    .imagegallery {
+        flex-direction: column;
+    }
+
+    .imagegallery img {
+        margin-bottom: 10px;
+    }
+
+
+}
+
