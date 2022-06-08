@@ -1,124 +1,134 @@
+/*importeert het lettertype naar de pagina*/
+
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+
+/*Betekent dat alle elementen gezien worden als een box, in mijn geval zorgt het ervoor dat het plaatje van de header er goed op komt*/
 * {
     box-sizing: border-box;
 }
 
-
+/*Zorgt ervoor het scrollen van pagina 'smooth' gaat*/
 html {
     scroll-behavior: smooth;
 }
 
-
+/*De body is het grootste gedeelte van mijn pagina*/
 body {
+    /*Zorgt ervoor dat het geimporteerde font-type wordt gebruikt*/
     font-family: VT323, sans-serif;
+    /*Laadt de backgroundimage in via de link. De no-repeat zorgt ervoor dat het plaatje niet meerdere keren wordt getoond*/
+    /*en de cover zorgt ervoor dat het plaatje de hele pagina vult*/
     background-image: url("https://cdnb.artstation.com/p/assets/images/images/033/006/633/large/new-zarawut-my-town-4.jpg?1608124684");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
+    /*Dit is de grote van de letters in de gewone tekst van de body*/
+    font-size: 20px;
 }
 
-
+/*Maakt de kleur van de tekst in de knopjes van de nav en eventuele andere linkjes*/
 a {
     color:black;
     text-decoration:none;
 }
 
-
+/*Zorgt ervoor dat wanneer je boven een knop of link hangt met je meus dat de kleur rood wordt en het font bold*/
 a:hover {
     color:red;
     font-weight:bold;
 }
 
-
-h1, h2, h3 {
+/*Zorgt ervoor dat de h1 boven de kopjes kan veranderen*/
+h1 {
+    /*Zorgt ervoor dat de tekst een klein beetje los staat van de top*/
     margin-top: 4px;
+    /*Zorgt ervoor dat het font normaal is en niet standaard dik/bold*/
     font-weight:normal;
+    /*Zorgt ervoor dat de tekst in het midden van de box staat*/
     text-align: center;
 }
 
-
+/*Dit is de navigatiebalk bovaan de pagina*/
 nav {
+    /*Zorgt ervoor dat de achtergrond kleur van de navigatiebalk wit is*/
     background-color: rgb(255, 255, 255);
+    /*Zorgt ervoor dat de buttons van de nav naast elkaar komen en niet onder elkaar. VOORBEELD VAN FLEXBOX*/
     display:flex;
+    /*Zorgt ervoor dat er evenveel space tussen de buttons zit en ze niet allemaal naast elkaar komen. VOORBEELD FLEXBOX*/
     justify-content: space-evenly;
+    /*Zorgt ervoor dat de rand van de nav rond wordt. Ziet er mooier uit dan een gewone vierkante nav*/
     border-radius: 5vh;
+    /*Zorgt ervoor dat de width van nav 90% van het scherm opneemt en niet 100%*/
     width: 90%;
+    /*Zorgt ervoor dat de margin links en rechts evengroot is waardoor de nav in het midden van het scherm komt*/
     margin-left: auto;
     margin-right: auto;
+    /*Zorgt ervoor dat de tekst van de buttons in het midden komt. Ook wanneer de pagina kleiner wordt*/
     text-align: center;
 }
 
-
-nav div {
+/*Dit zijn de knopjes in de nav*/
+nav a {
+    /*Zorgt ervoor dat de space om de buttons groter worden*/
     padding:8px;
-    justify-content: space-evenly;
 }
 
+/*Dit verzorgt hoe de plaatjes eruit zien op de pagina*/
 
-.imagegallery {
-    margin:0;
-    padding:0;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    flex-direction: column;
-}
-
-
-.imagegallery img {
-    width:80%;
-    /*height: 20vh;*/
-    object-fit:cover;
+.images img {
+    width:50%;
+    /*Zorgt ervoor dat er 10px tussen de plaatjes zitten en ze dus niet zo dicht op elkaar zitten*/
     margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
+/*Een aantal plaatjes wil ik groter hebben. Vandaar dat ik een nieuwe class aanmaak met een ander % voor de plaatjes*/
+.images1 img {
+    width: 100%;
+}
+
+/*Een aantal plaatjes wil ik kleiner hebben. Vandaar dat ik een nieuwe class aanmaak met een ander % voor de plaatjes*/
+.images2 img {
+    width: 70%;
+}
+
+/*Dit is de header van de pagina. Hier staat het plaatje in*/
 header {
-    padding-top:10vh;
+    /*Dit zorgt ervoor dat de header niet gelijk tegen de nav aanzit*/
     margin-top: 10px;
+    /*Dit zorgt ervoor dat de header niet gelijk tegen de section aanzit*/
     margin-bottom: 10px;
-    color:white;
-    text-align:center;
+    /*Dit zorgt voor de hoogte van het plaatje*/
     height:30vh;
+    /*Laadt de backgroundimage in via de link. De no-repeat zorgt ervoor dat het plaatje niet meerdere keren wordt getoond*/
+    /*de backgroundposition center zorgt ervoor dat het plaatje in het midden van het scherm zit*/
     background-image:url(http://2.bp.blogspot.com/-iF6l6sgb-fw/Wb_03Hj8arI/AAAAAAAAKtU/SGDL5lmaensUrU2jRelFsTOWvWGnsP4fACK4BGAYYCw/s1600/BRANDAAN.jpg);
     background-size: 1000px;
     background-repeat: no-repeat;
     background-position:center;
 }
 
-
+/*Dit zijn de kopjes onepager waar de tekst in staat*/
 section {
+    /*Dit maakt de achtergrond kleur van de sections wit*/
     background-color: rgb(255, 255, 255);
+    /*Dit zorgt ervoor dat de tekst niet gelijk tegen de randen aanstaat maar 20px ervan af*/
     padding: 20px;
+    /*Dit zorgt ervoor dat de secties niet bijna het hele scherm opvullen maar een margin hebben waardoor ze in het midden staan*/
     margin: 0 20% 30px 20%;
-    color: rgb(22, 22, 66);
-    font-size: 1.1em;
+    /*Dit maakt de tekst in de sections zwart*/
+    color: rgb(0, 0, 0);
+    /*Dit zorgt ervoor dat de elementen in de section in het centrum komen*/
     text-align: center;
 }
 
-
-footer {
-    background-color: rgb(255, 255, 255);
-    height:30vh;
-    display:flex;
-    flex-direction:column;
-    text-align:center;
-    justify-content:center;
-}
-
-
 @media only screen and (max-width: 900px) {
 
-
     nav {
-        display: block;
         padding: 10px;
         position: static;
+        justify-content: center;
+        flex-direction: column;
     }
 
     section {
@@ -132,14 +142,11 @@ footer {
         background-size: 100%;
     }
 
-    .imagegallery {
+    .images {
         flex-direction: column;
     }
 
-    .imagegallery img {
+    .images img {
         margin-bottom: 10px;
     }
-
-
 }
-
